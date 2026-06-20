@@ -1,5 +1,7 @@
 # Quickstart
 
+> Note: The instructions given below assumes a Linux environment.
+
 ## Environment setup
 
 ```bash
