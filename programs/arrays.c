@@ -17,13 +17,24 @@ int main()
     {
         printf("%d\n", *(ptr + i)); // Prints all elements of the array.
     }
+    printf("\n");
 
     // Internally:
     // - ptr + 1 → address + sizeof(int)
     // - ptr + 2 → address + 2 * sizeof(int)
     // - ptr + 3 → address + 3 * sizeof(int)
 
-    // This is known as pointer arithmetic. It was only possible in this case because arrays in C are contiguous in memory.
+    // This is possible because arrays in C are contiguous in memory.
+
+    // We can also do this:
+    ptr++;
+    printf("%d\n", *ptr); // The second element of the array.
+    ptr--;
+    printf("%d\n", *ptr); // The first element of the array.
+
+    // NOTE
+    // ****
+    // These practices are a bit low-level savvy. In most modern C code, people don’t usually write things lik e *(ptr + i) unless they’re doing something very pointer-focused. There are more clean, readable ways to do the same thing. We are just showing you how arrays work internally.
 
     return 0;
 }
